@@ -1,0 +1,179 @@
+c:\users\desarrollo\documents\visual studio 2015\Projects\voxpopuliAPI\voxpopuliAPI\bin\ApplicationInsights.config
+c:\users\desarrollo\documents\visual studio 2015\Projects\voxpopuliAPI\voxpopuliAPI\bin\roslyn\csc.exe
+c:\users\desarrollo\documents\visual studio 2015\Projects\voxpopuliAPI\voxpopuliAPI\bin\roslyn\Microsoft.Build.Tasks.CodeAnalysis.dll
+c:\users\desarrollo\documents\visual studio 2015\Projects\voxpopuliAPI\voxpopuliAPI\bin\roslyn\Microsoft.CodeAnalysis.CSharp.dll
+c:\users\desarrollo\documents\visual studio 2015\Projects\voxpopuliAPI\voxpopuliAPI\bin\roslyn\Microsoft.CodeAnalysis.dll
+c:\users\desarrollo\documents\visual studio 2015\Projects\voxpopuliAPI\voxpopuliAPI\bin\roslyn\Microsoft.CodeAnalysis.VisualBasic.dll
+c:\users\desarrollo\documents\visual studio 2015\Projects\voxpopuliAPI\voxpopuliAPI\bin\roslyn\Microsoft.CSharp.Core.targets
+c:\users\desarrollo\documents\visual studio 2015\Projects\voxpopuliAPI\voxpopuliAPI\bin\roslyn\Microsoft.VisualBasic.Core.targets
+c:\users\desarrollo\documents\visual studio 2015\Projects\voxpopuliAPI\voxpopuliAPI\bin\roslyn\System.Collections.Immutable.dll
+c:\users\desarrollo\documents\visual studio 2015\Projects\voxpopuliAPI\voxpopuliAPI\bin\roslyn\System.Reflection.Metadata.dll
+c:\users\desarrollo\documents\visual studio 2015\Projects\voxpopuliAPI\voxpopuliAPI\bin\roslyn\vbc.exe
+c:\users\desarrollo\documents\visual studio 2015\Projects\voxpopuliAPI\voxpopuliAPI\bin\roslyn\VBCSCompiler.exe
+c:\users\desarrollo\documents\visual studio 2015\Projects\voxpopuliAPI\voxpopuliAPI\bin\roslyn\VBCSCompiler.exe.config
+c:\users\desarrollo\documents\visual studio 2015\Projects\voxpopuliAPI\voxpopuliAPI\bin\voxpopuliAPI.dll.config
+c:\users\desarrollo\documents\visual studio 2015\Projects\voxpopuliAPI\voxpopuliAPI\bin\voxpopuliAPI.dll
+c:\users\desarrollo\documents\visual studio 2015\Projects\voxpopuliAPI\voxpopuliAPI\bin\voxpopuliAPI.pdb
+c:\users\desarrollo\documents\visual studio 2015\Projects\voxpopuliAPI\voxpopuliAPI\bin\Antlr3.Runtime.dll
+c:\users\desarrollo\documents\visual studio 2015\Projects\voxpopuliAPI\voxpopuliAPI\bin\EntityFramework.dll
+c:\users\desarrollo\documents\visual studio 2015\Projects\voxpopuliAPI\voxpopuliAPI\bin\EntityFramework.SqlServer.dll
+c:\users\desarrollo\documents\visual studio 2015\Projects\voxpopuliAPI\voxpopuliAPI\bin\Microsoft.AI.Agent.Intercept.dll
+c:\users\desarrollo\documents\visual studio 2015\Projects\voxpopuliAPI\voxpopuliAPI\bin\Microsoft.AI.DependencyCollector.dll
+c:\users\desarrollo\documents\visual studio 2015\Projects\voxpopuliAPI\voxpopuliAPI\bin\Microsoft.AI.PerfCounterCollector.dll
+c:\users\desarrollo\documents\visual studio 2015\Projects\voxpopuliAPI\voxpopuliAPI\bin\Microsoft.AI.ServerTelemetryChannel.dll
+c:\users\desarrollo\documents\visual studio 2015\Projects\voxpopuliAPI\voxpopuliAPI\bin\Microsoft.AI.Web.dll
+c:\users\desarrollo\documents\visual studio 2015\Projects\voxpopuliAPI\voxpopuliAPI\bin\Microsoft.AI.WindowsServer.dll
+c:\users\desarrollo\documents\visual studio 2015\Projects\voxpopuliAPI\voxpopuliAPI\bin\Microsoft.ApplicationInsights.dll
+c:\users\desarrollo\documents\visual studio 2015\Projects\voxpopuliAPI\voxpopuliAPI\bin\Microsoft.AspNet.Identity.Core.dll
+c:\users\desarrollo\documents\visual studio 2015\Projects\voxpopuliAPI\voxpopuliAPI\bin\Microsoft.AspNet.Identity.EntityFramework.dll
+c:\users\desarrollo\documents\visual studio 2015\Projects\voxpopuliAPI\voxpopuliAPI\bin\Microsoft.AspNet.Identity.Owin.dll
+c:\users\desarrollo\documents\visual studio 2015\Projects\voxpopuliAPI\voxpopuliAPI\bin\Microsoft.CodeDom.Providers.DotNetCompilerPlatform.dll
+c:\users\desarrollo\documents\visual studio 2015\Projects\voxpopuliAPI\voxpopuliAPI\bin\Microsoft.Owin.dll
+c:\users\desarrollo\documents\visual studio 2015\Projects\voxpopuliAPI\voxpopuliAPI\bin\Microsoft.Owin.Host.SystemWeb.dll
+c:\users\desarrollo\documents\visual studio 2015\Projects\voxpopuliAPI\voxpopuliAPI\bin\Microsoft.Owin.Security.Cookies.dll
+c:\users\desarrollo\documents\visual studio 2015\Projects\voxpopuliAPI\voxpopuliAPI\bin\Microsoft.Owin.Security.dll
+c:\users\desarrollo\documents\visual studio 2015\Projects\voxpopuliAPI\voxpopuliAPI\bin\Microsoft.Owin.Security.Facebook.dll
+c:\users\desarrollo\documents\visual studio 2015\Projects\voxpopuliAPI\voxpopuliAPI\bin\Microsoft.Owin.Security.Google.dll
+c:\users\desarrollo\documents\visual studio 2015\Projects\voxpopuliAPI\voxpopuliAPI\bin\Microsoft.Owin.Security.MicrosoftAccount.dll
+c:\users\desarrollo\documents\visual studio 2015\Projects\voxpopuliAPI\voxpopuliAPI\bin\Microsoft.Owin.Security.OAuth.dll
+c:\users\desarrollo\documents\visual studio 2015\Projects\voxpopuliAPI\voxpopuliAPI\bin\Microsoft.Owin.Security.Twitter.dll
+c:\users\desarrollo\documents\visual studio 2015\Projects\voxpopuliAPI\voxpopuliAPI\bin\Microsoft.Web.Infrastructure.dll
+c:\users\desarrollo\documents\visual studio 2015\Projects\voxpopuliAPI\voxpopuliAPI\bin\Newtonsoft.Json.dll
+c:\users\desarrollo\documents\visual studio 2015\Projects\voxpopuliAPI\voxpopuliAPI\bin\Owin.dll
+c:\users\desarrollo\documents\visual studio 2015\Projects\voxpopuliAPI\voxpopuliAPI\bin\System.Net.Http.Formatting.dll
+c:\users\desarrollo\documents\visual studio 2015\Projects\voxpopuliAPI\voxpopuliAPI\bin\System.Web.Helpers.dll
+c:\users\desarrollo\documents\visual studio 2015\Projects\voxpopuliAPI\voxpopuliAPI\bin\System.Web.Http.dll
+c:\users\desarrollo\documents\visual studio 2015\Projects\voxpopuliAPI\voxpopuliAPI\bin\System.Web.Http.Owin.dll
+c:\users\desarrollo\documents\visual studio 2015\Projects\voxpopuliAPI\voxpopuliAPI\bin\System.Web.Http.WebHost.dll
+c:\users\desarrollo\documents\visual studio 2015\Projects\voxpopuliAPI\voxpopuliAPI\bin\System.Web.Mvc.dll
+c:\users\desarrollo\documents\visual studio 2015\Projects\voxpopuliAPI\voxpopuliAPI\bin\System.Web.Optimization.dll
+c:\users\desarrollo\documents\visual studio 2015\Projects\voxpopuliAPI\voxpopuliAPI\bin\System.Web.Razor.dll
+c:\users\desarrollo\documents\visual studio 2015\Projects\voxpopuliAPI\voxpopuliAPI\bin\System.Web.WebPages.Deployment.dll
+c:\users\desarrollo\documents\visual studio 2015\Projects\voxpopuliAPI\voxpopuliAPI\bin\System.Web.WebPages.dll
+c:\users\desarrollo\documents\visual studio 2015\Projects\voxpopuliAPI\voxpopuliAPI\bin\System.Web.WebPages.Razor.dll
+c:\users\desarrollo\documents\visual studio 2015\Projects\voxpopuliAPI\voxpopuliAPI\bin\WebGrease.dll
+c:\users\desarrollo\documents\visual studio 2015\Projects\voxpopuliAPI\voxpopuliAPI\bin\Microsoft.AI.DependencyCollector.xml
+c:\users\desarrollo\documents\visual studio 2015\Projects\voxpopuliAPI\voxpopuliAPI\bin\Microsoft.AI.ServerTelemetryChannel.xml
+c:\users\desarrollo\documents\visual studio 2015\Projects\voxpopuliAPI\voxpopuliAPI\bin\Microsoft.AI.Web.xml
+c:\users\desarrollo\documents\visual studio 2015\Projects\voxpopuliAPI\voxpopuliAPI\bin\Microsoft.AI.WindowsServer.xml
+c:\users\desarrollo\documents\visual studio 2015\Projects\voxpopuliAPI\voxpopuliAPI\bin\Microsoft.ApplicationInsights.xml
+c:\users\desarrollo\documents\visual studio 2015\Projects\voxpopuliAPI\voxpopuliAPI\bin\Microsoft.CodeDom.Providers.DotNetCompilerPlatform.xml
+c:\users\desarrollo\documents\visual studio 2015\Projects\voxpopuliAPI\voxpopuliAPI\bin\Newtonsoft.Json.xml
+c:\users\desarrollo\documents\visual studio 2015\Projects\voxpopuliAPI\voxpopuliAPI\bin\System.Net.Http.Formatting.xml
+c:\users\desarrollo\documents\visual studio 2015\Projects\voxpopuliAPI\voxpopuliAPI\bin\System.Web.Helpers.xml
+c:\users\desarrollo\documents\visual studio 2015\Projects\voxpopuliAPI\voxpopuliAPI\bin\System.Web.Http.xml
+c:\users\desarrollo\documents\visual studio 2015\Projects\voxpopuliAPI\voxpopuliAPI\bin\System.Web.Http.WebHost.xml
+c:\users\desarrollo\documents\visual studio 2015\Projects\voxpopuliAPI\voxpopuliAPI\bin\System.Web.Mvc.xml
+c:\users\desarrollo\documents\visual studio 2015\Projects\voxpopuliAPI\voxpopuliAPI\bin\System.Web.Optimization.xml
+c:\users\desarrollo\documents\visual studio 2015\Projects\voxpopuliAPI\voxpopuliAPI\bin\System.Web.Razor.xml
+c:\users\desarrollo\documents\visual studio 2015\Projects\voxpopuliAPI\voxpopuliAPI\bin\System.Web.WebPages.xml
+c:\users\desarrollo\documents\visual studio 2015\Projects\voxpopuliAPI\voxpopuliAPI\bin\System.Web.WebPages.Deployment.xml
+c:\users\desarrollo\documents\visual studio 2015\Projects\voxpopuliAPI\voxpopuliAPI\bin\System.Web.WebPages.Razor.xml
+c:\users\desarrollo\documents\visual studio 2015\Projects\voxpopuliAPI\voxpopuliAPI\bin\Antlr3.Runtime.pdb
+c:\users\desarrollo\documents\visual studio 2015\Projects\voxpopuliAPI\voxpopuliAPI\bin\EntityFramework.xml
+c:\users\desarrollo\documents\visual studio 2015\Projects\voxpopuliAPI\voxpopuliAPI\bin\EntityFramework.SqlServer.xml
+c:\users\desarrollo\documents\visual studio 2015\Projects\voxpopuliAPI\voxpopuliAPI\bin\Microsoft.AspNet.Identity.Core.xml
+c:\users\desarrollo\documents\visual studio 2015\Projects\voxpopuliAPI\voxpopuliAPI\bin\Microsoft.AspNet.Identity.Owin.xml
+c:\users\desarrollo\documents\visual studio 2015\Projects\voxpopuliAPI\voxpopuliAPI\bin\Microsoft.AspNet.Identity.EntityFramework.xml
+c:\users\desarrollo\documents\visual studio 2015\Projects\voxpopuliAPI\voxpopuliAPI\bin\Microsoft.Owin.xml
+c:\users\desarrollo\documents\visual studio 2015\Projects\voxpopuliAPI\voxpopuliAPI\bin\Microsoft.Owin.Host.SystemWeb.xml
+c:\users\desarrollo\documents\visual studio 2015\Projects\voxpopuliAPI\voxpopuliAPI\bin\Microsoft.Owin.Security.xml
+c:\users\desarrollo\documents\visual studio 2015\Projects\voxpopuliAPI\voxpopuliAPI\bin\Microsoft.Owin.Security.Facebook.xml
+c:\users\desarrollo\documents\visual studio 2015\Projects\voxpopuliAPI\voxpopuliAPI\bin\Microsoft.Owin.Security.Cookies.xml
+c:\users\desarrollo\documents\visual studio 2015\Projects\voxpopuliAPI\voxpopuliAPI\bin\Microsoft.Owin.Security.OAuth.xml
+c:\users\desarrollo\documents\visual studio 2015\Projects\voxpopuliAPI\voxpopuliAPI\bin\Microsoft.Owin.Security.Google.xml
+c:\users\desarrollo\documents\visual studio 2015\Projects\voxpopuliAPI\voxpopuliAPI\bin\Microsoft.Owin.Security.Twitter.xml
+c:\users\desarrollo\documents\visual studio 2015\Projects\voxpopuliAPI\voxpopuliAPI\bin\Microsoft.Owin.Security.MicrosoftAccount.xml
+c:\users\desarrollo\documents\visual studio 2015\Projects\voxpopuliAPI\voxpopuliAPI\bin\System.Web.Http.Owin.xml
+c:\users\desarrollo\documents\visual studio 2015\Projects\voxpopuliAPI\voxpopuliAPI\obj\Debug\voxpopuliAPI.dll
+c:\users\desarrollo\documents\visual studio 2015\Projects\voxpopuliAPI\voxpopuliAPI\obj\Debug\voxpopuliAPI.pdb
+\\192.168.1.19\Hackaton 2017\voxpopuliAPI\voxpopuliAPI\obj\Debug\voxpopuliAPI.csprojResolveAssemblyReference.cache
+C:\Users\Desarrollo\Desktop\voxpopuliAPI\voxpopuliAPI\bin\ApplicationInsights.config
+C:\Users\Desarrollo\Desktop\voxpopuliAPI\voxpopuliAPI\bin\roslyn\csc.exe
+C:\Users\Desarrollo\Desktop\voxpopuliAPI\voxpopuliAPI\bin\roslyn\Microsoft.Build.Tasks.CodeAnalysis.dll
+C:\Users\Desarrollo\Desktop\voxpopuliAPI\voxpopuliAPI\bin\roslyn\Microsoft.CodeAnalysis.CSharp.dll
+C:\Users\Desarrollo\Desktop\voxpopuliAPI\voxpopuliAPI\bin\roslyn\Microsoft.CodeAnalysis.dll
+C:\Users\Desarrollo\Desktop\voxpopuliAPI\voxpopuliAPI\bin\roslyn\Microsoft.CodeAnalysis.VisualBasic.dll
+C:\Users\Desarrollo\Desktop\voxpopuliAPI\voxpopuliAPI\bin\roslyn\Microsoft.CSharp.Core.targets
+C:\Users\Desarrollo\Desktop\voxpopuliAPI\voxpopuliAPI\bin\roslyn\Microsoft.VisualBasic.Core.targets
+C:\Users\Desarrollo\Desktop\voxpopuliAPI\voxpopuliAPI\bin\roslyn\System.Collections.Immutable.dll
+C:\Users\Desarrollo\Desktop\voxpopuliAPI\voxpopuliAPI\bin\roslyn\System.Reflection.Metadata.dll
+C:\Users\Desarrollo\Desktop\voxpopuliAPI\voxpopuliAPI\bin\roslyn\vbc.exe
+C:\Users\Desarrollo\Desktop\voxpopuliAPI\voxpopuliAPI\bin\roslyn\VBCSCompiler.exe
+C:\Users\Desarrollo\Desktop\voxpopuliAPI\voxpopuliAPI\bin\roslyn\VBCSCompiler.exe.config
+C:\Users\Desarrollo\Desktop\voxpopuliAPI\voxpopuliAPI\bin\voxpopuliAPI.dll.config
+C:\Users\Desarrollo\Desktop\voxpopuliAPI\voxpopuliAPI\bin\voxpopuliAPI.dll
+C:\Users\Desarrollo\Desktop\voxpopuliAPI\voxpopuliAPI\bin\voxpopuliAPI.pdb
+C:\Users\Desarrollo\Desktop\voxpopuliAPI\voxpopuliAPI\bin\Antlr3.Runtime.dll
+C:\Users\Desarrollo\Desktop\voxpopuliAPI\voxpopuliAPI\bin\EntityFramework.dll
+C:\Users\Desarrollo\Desktop\voxpopuliAPI\voxpopuliAPI\bin\EntityFramework.SqlServer.dll
+C:\Users\Desarrollo\Desktop\voxpopuliAPI\voxpopuliAPI\bin\Microsoft.AI.Agent.Intercept.dll
+C:\Users\Desarrollo\Desktop\voxpopuliAPI\voxpopuliAPI\bin\Microsoft.AI.DependencyCollector.dll
+C:\Users\Desarrollo\Desktop\voxpopuliAPI\voxpopuliAPI\bin\Microsoft.AI.PerfCounterCollector.dll
+C:\Users\Desarrollo\Desktop\voxpopuliAPI\voxpopuliAPI\bin\Microsoft.AI.ServerTelemetryChannel.dll
+C:\Users\Desarrollo\Desktop\voxpopuliAPI\voxpopuliAPI\bin\Microsoft.AI.Web.dll
+C:\Users\Desarrollo\Desktop\voxpopuliAPI\voxpopuliAPI\bin\Microsoft.AI.WindowsServer.dll
+C:\Users\Desarrollo\Desktop\voxpopuliAPI\voxpopuliAPI\bin\Microsoft.ApplicationInsights.dll
+C:\Users\Desarrollo\Desktop\voxpopuliAPI\voxpopuliAPI\bin\Microsoft.AspNet.Identity.Core.dll
+C:\Users\Desarrollo\Desktop\voxpopuliAPI\voxpopuliAPI\bin\Microsoft.AspNet.Identity.EntityFramework.dll
+C:\Users\Desarrollo\Desktop\voxpopuliAPI\voxpopuliAPI\bin\Microsoft.AspNet.Identity.Owin.dll
+C:\Users\Desarrollo\Desktop\voxpopuliAPI\voxpopuliAPI\bin\Microsoft.CodeDom.Providers.DotNetCompilerPlatform.dll
+C:\Users\Desarrollo\Desktop\voxpopuliAPI\voxpopuliAPI\bin\Microsoft.Owin.dll
+C:\Users\Desarrollo\Desktop\voxpopuliAPI\voxpopuliAPI\bin\Microsoft.Owin.Host.SystemWeb.dll
+C:\Users\Desarrollo\Desktop\voxpopuliAPI\voxpopuliAPI\bin\Microsoft.Owin.Security.Cookies.dll
+C:\Users\Desarrollo\Desktop\voxpopuliAPI\voxpopuliAPI\bin\Microsoft.Owin.Security.dll
+C:\Users\Desarrollo\Desktop\voxpopuliAPI\voxpopuliAPI\bin\Microsoft.Owin.Security.Facebook.dll
+C:\Users\Desarrollo\Desktop\voxpopuliAPI\voxpopuliAPI\bin\Microsoft.Owin.Security.Google.dll
+C:\Users\Desarrollo\Desktop\voxpopuliAPI\voxpopuliAPI\bin\Microsoft.Owin.Security.MicrosoftAccount.dll
+C:\Users\Desarrollo\Desktop\voxpopuliAPI\voxpopuliAPI\bin\Microsoft.Owin.Security.OAuth.dll
+C:\Users\Desarrollo\Desktop\voxpopuliAPI\voxpopuliAPI\bin\Microsoft.Owin.Security.Twitter.dll
+C:\Users\Desarrollo\Desktop\voxpopuliAPI\voxpopuliAPI\bin\Microsoft.Web.Infrastructure.dll
+C:\Users\Desarrollo\Desktop\voxpopuliAPI\voxpopuliAPI\bin\Newtonsoft.Json.dll
+C:\Users\Desarrollo\Desktop\voxpopuliAPI\voxpopuliAPI\bin\Owin.dll
+C:\Users\Desarrollo\Desktop\voxpopuliAPI\voxpopuliAPI\bin\System.Net.Http.Formatting.dll
+C:\Users\Desarrollo\Desktop\voxpopuliAPI\voxpopuliAPI\bin\System.Web.Helpers.dll
+C:\Users\Desarrollo\Desktop\voxpopuliAPI\voxpopuliAPI\bin\System.Web.Http.dll
+C:\Users\Desarrollo\Desktop\voxpopuliAPI\voxpopuliAPI\bin\System.Web.Http.Owin.dll
+C:\Users\Desarrollo\Desktop\voxpopuliAPI\voxpopuliAPI\bin\System.Web.Http.WebHost.dll
+C:\Users\Desarrollo\Desktop\voxpopuliAPI\voxpopuliAPI\bin\System.Web.Mvc.dll
+C:\Users\Desarrollo\Desktop\voxpopuliAPI\voxpopuliAPI\bin\System.Web.Optimization.dll
+C:\Users\Desarrollo\Desktop\voxpopuliAPI\voxpopuliAPI\bin\System.Web.Razor.dll
+C:\Users\Desarrollo\Desktop\voxpopuliAPI\voxpopuliAPI\bin\System.Web.WebPages.Deployment.dll
+C:\Users\Desarrollo\Desktop\voxpopuliAPI\voxpopuliAPI\bin\System.Web.WebPages.dll
+C:\Users\Desarrollo\Desktop\voxpopuliAPI\voxpopuliAPI\bin\System.Web.WebPages.Razor.dll
+C:\Users\Desarrollo\Desktop\voxpopuliAPI\voxpopuliAPI\bin\WebGrease.dll
+C:\Users\Desarrollo\Desktop\voxpopuliAPI\voxpopuliAPI\bin\Microsoft.AI.DependencyCollector.xml
+C:\Users\Desarrollo\Desktop\voxpopuliAPI\voxpopuliAPI\bin\Microsoft.AI.ServerTelemetryChannel.xml
+C:\Users\Desarrollo\Desktop\voxpopuliAPI\voxpopuliAPI\bin\Microsoft.AI.Web.xml
+C:\Users\Desarrollo\Desktop\voxpopuliAPI\voxpopuliAPI\bin\Microsoft.AI.WindowsServer.xml
+C:\Users\Desarrollo\Desktop\voxpopuliAPI\voxpopuliAPI\bin\Microsoft.ApplicationInsights.xml
+C:\Users\Desarrollo\Desktop\voxpopuliAPI\voxpopuliAPI\bin\Microsoft.CodeDom.Providers.DotNetCompilerPlatform.xml
+C:\Users\Desarrollo\Desktop\voxpopuliAPI\voxpopuliAPI\bin\Newtonsoft.Json.xml
+C:\Users\Desarrollo\Desktop\voxpopuliAPI\voxpopuliAPI\bin\System.Net.Http.Formatting.xml
+C:\Users\Desarrollo\Desktop\voxpopuliAPI\voxpopuliAPI\bin\System.Web.Helpers.xml
+C:\Users\Desarrollo\Desktop\voxpopuliAPI\voxpopuliAPI\bin\System.Web.Http.xml
+C:\Users\Desarrollo\Desktop\voxpopuliAPI\voxpopuliAPI\bin\System.Web.Http.WebHost.xml
+C:\Users\Desarrollo\Desktop\voxpopuliAPI\voxpopuliAPI\bin\System.Web.Mvc.xml
+C:\Users\Desarrollo\Desktop\voxpopuliAPI\voxpopuliAPI\bin\System.Web.Optimization.xml
+C:\Users\Desarrollo\Desktop\voxpopuliAPI\voxpopuliAPI\bin\System.Web.Razor.xml
+C:\Users\Desarrollo\Desktop\voxpopuliAPI\voxpopuliAPI\bin\System.Web.WebPages.xml
+C:\Users\Desarrollo\Desktop\voxpopuliAPI\voxpopuliAPI\bin\System.Web.WebPages.Deployment.xml
+C:\Users\Desarrollo\Desktop\voxpopuliAPI\voxpopuliAPI\bin\System.Web.WebPages.Razor.xml
+C:\Users\Desarrollo\Desktop\voxpopuliAPI\voxpopuliAPI\bin\Antlr3.Runtime.pdb
+C:\Users\Desarrollo\Desktop\voxpopuliAPI\voxpopuliAPI\bin\EntityFramework.xml
+C:\Users\Desarrollo\Desktop\voxpopuliAPI\voxpopuliAPI\bin\EntityFramework.SqlServer.xml
+C:\Users\Desarrollo\Desktop\voxpopuliAPI\voxpopuliAPI\bin\Microsoft.AspNet.Identity.Core.xml
+C:\Users\Desarrollo\Desktop\voxpopuliAPI\voxpopuliAPI\bin\Microsoft.AspNet.Identity.Owin.xml
+C:\Users\Desarrollo\Desktop\voxpopuliAPI\voxpopuliAPI\bin\Microsoft.AspNet.Identity.EntityFramework.xml
+C:\Users\Desarrollo\Desktop\voxpopuliAPI\voxpopuliAPI\bin\Microsoft.Owin.xml
+C:\Users\Desarrollo\Desktop\voxpopuliAPI\voxpopuliAPI\bin\Microsoft.Owin.Host.SystemWeb.xml
+C:\Users\Desarrollo\Desktop\voxpopuliAPI\voxpopuliAPI\bin\Microsoft.Owin.Security.xml
+C:\Users\Desarrollo\Desktop\voxpopuliAPI\voxpopuliAPI\bin\Microsoft.Owin.Security.Facebook.xml
+C:\Users\Desarrollo\Desktop\voxpopuliAPI\voxpopuliAPI\bin\Microsoft.Owin.Security.Cookies.xml
+C:\Users\Desarrollo\Desktop\voxpopuliAPI\voxpopuliAPI\bin\Microsoft.Owin.Security.OAuth.xml
+C:\Users\Desarrollo\Desktop\voxpopuliAPI\voxpopuliAPI\bin\Microsoft.Owin.Security.Google.xml
+C:\Users\Desarrollo\Desktop\voxpopuliAPI\voxpopuliAPI\bin\Microsoft.Owin.Security.Twitter.xml
+C:\Users\Desarrollo\Desktop\voxpopuliAPI\voxpopuliAPI\bin\Microsoft.Owin.Security.MicrosoftAccount.xml
+C:\Users\Desarrollo\Desktop\voxpopuliAPI\voxpopuliAPI\bin\System.Web.Http.Owin.xml
+C:\Users\Desarrollo\Desktop\voxpopuliAPI\voxpopuliAPI\obj\Debug\voxpopuliAPI.dll
+C:\Users\Desarrollo\Desktop\voxpopuliAPI\voxpopuliAPI\obj\Debug\voxpopuliAPI.pdb

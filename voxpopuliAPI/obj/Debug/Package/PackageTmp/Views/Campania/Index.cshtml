@@ -1,0 +1,77 @@
+﻿
+
+
+<link rel="stylesheet" href="https://kendo.cdn.telerik.com/2017.1.223/styles/kendo.common-material.min.css" />
+<link rel="stylesheet" href="https://kendo.cdn.telerik.com/2017.1.223/styles/kendo.material.min.css" />
+<link rel="stylesheet" href="https://kendo.cdn.telerik.com/2017.1.223/styles/kendo.material.mobile.min.css" />
+
+<script src="~/Scripts/jquery-3.2.1.min.js"></script>
+<script src="https://kendo.cdn.telerik.com/2017.1.223/js/kendo.all.min.js"></script>
+<script src="~/Scripts/campanias.js"></script>
+
+<div class="row">
+
+    <script type="text/x-kendo-template" id="template">
+        <div class="toolbar">
+            <input type="button" id="btnAgregar" onclick="Editar();" class="k-button k-button-icontext k-grid-add" style="width: 100px" value="Editar">
+            <input type="button" id="btnAgregar" onclick="Agregar();" class="k-button k-button-icontext k-grid-add" style="width: 100px" value="Agregar" />
+            <input type="button" id="btnAgregar" onclick="viewIndicador();" class="k-button k-button-icontext k-grid-add" style="width: 150px" value="Ver Indicador" />
+        </div>
+    </script>
+    <br />
+
+    <div id="grid"></div>
+
+    <div id="window" style="display:none">
+        <div class="row form-group">
+            <input type="text" style="display:none" id="txtCampaniaId">
+            <label for="txtCampania" class="col-sm-10 com-md-10">Nombre</label>
+            <input type="text" class="form-control col-sm-10 col-md-10" id="txtCampania">
+        </div>
+        <div class="row form-group">
+            <label for="txtDescripcion" class="col-sm-10 com-md-10">Descripción</label>
+            <input type="text" class="form-control col-sm-10 com-md-10" id="txtDescripcion">
+        </div>
+        <div class="row form-group">
+            <label for="txtDescripcion" class="col-sm-10 com-md-10">Activa</label>
+            <select id="Activa" class="form-control">
+                <option>SI</option>
+                <option>NO</option>
+            </select>
+        </div>
+        <div class="row form-group">
+            <label for="fechaInicia" class="col-sm-10 com-md-10">Fecha Inicia</label>
+            <input id="fechaInicia" type="date" class="form-control col-sm-10 com-md-10" name="bday" min="2000-01-02"><br>
+        </div>
+        <div class="row form-group">
+            <label for="fechaFinaliza" class="col-sm-10 com-md-10">Fecha Finaliza</label>
+            <input id="fechaFinaliza" type="date" class="form-control col-sm-10 com-md-10" name="bday" min="2000-01-02"><br>
+        </div>
+        <div class="row form-group pull-right">
+            <button id="btnEnviar" class="btn btn-primary" style="margin-right: -25px; width:80px" onclick="EnviarCampania();">Enviar</button>
+        </div>
+
+    </div>
+
+
+
+    <div class="responsive-message"></div>
+
+    <style>
+        .k-window .k-window-content {
+            padding-left: 5%;
+            padding-right: 9%;
+        }
+
+        .armchair {
+            float: left;
+            margin: 30px 30px 120px 30px;
+            text-align: center;
+        }
+
+            .armchair img {
+                display: block;
+                margin-bottom: 10px;
+            }
+    </style>
+</div>

@@ -1,0 +1,104 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Mapping Space="C-S" xmlns="http://schemas.microsoft.com/ado/2009/11/mapping/cs">
+  <EntityContainerMapping StorageEntityContainer="voxpopuliDBModelStoreContainer" CdmEntityContainer="voxpopuliDBEntities">
+    <EntitySetMapping Name="Campania">
+      <EntityTypeMapping TypeName="voxpopuliDBModel.Campania">
+        <MappingFragment StoreEntitySet="Campania">
+          <ScalarProperty Name="FechaFinaliza" ColumnName="FechaFinaliza" />
+          <ScalarProperty Name="FechaInicia" ColumnName="FechaInicia" />
+          <ScalarProperty Name="TipoCampaniaId" ColumnName="TipoCampaniaId" />
+          <ScalarProperty Name="Estatus" ColumnName="Estatus" />
+          <ScalarProperty Name="Descripcion" ColumnName="Descripcion" />
+          <ScalarProperty Name="Nombre" ColumnName="Nombre" />
+          <ScalarProperty Name="CampaniaId" ColumnName="CampaniaId" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="CampaniaDetalle">
+      <EntityTypeMapping TypeName="voxpopuliDBModel.CampaniaDetalle">
+        <MappingFragment StoreEntitySet="CampaniaDetalle">
+          <ScalarProperty Name="Fecha" ColumnName="Fecha" />
+          <ScalarProperty Name="Orden" ColumnName="Orden" />
+          <ScalarProperty Name="PreguntaId" ColumnName="PreguntaId" />
+          <ScalarProperty Name="CampaniaId" ColumnName="CampaniaId" />
+          <ScalarProperty Name="CampaniaDetalleId" ColumnName="CampaniaDetalleId" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="ControlPregunta">
+      <EntityTypeMapping TypeName="voxpopuliDBModel.ControlPregunta">
+        <MappingFragment StoreEntitySet="ControlPregunta">
+          <ScalarProperty Name="Fecha" ColumnName="Fecha" />
+          <ScalarProperty Name="Orden" ColumnName="Orden" />
+          <ScalarProperty Name="RespuestaId" ColumnName="RespuestaId" />
+          <ScalarProperty Name="PreguntaId" ColumnName="PreguntaId" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="ControlVotacion">
+      <EntityTypeMapping TypeName="voxpopuliDBModel.ControlVotacion">
+        <MappingFragment StoreEntitySet="ControlVotacion">
+          <ScalarProperty Name="Fecha" ColumnName="Fecha" />
+          <ScalarProperty Name="Longitud" ColumnName="Longitud" />
+          <ScalarProperty Name="Latitud" ColumnName="Latitud" />
+          <ScalarProperty Name="DeviceId" ColumnName="DeviceId" />
+          <ScalarProperty Name="CampaniaId" ColumnName="CampaniaId" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="Pregunta">
+      <EntityTypeMapping TypeName="voxpopuliDBModel.Pregunta">
+        <MappingFragment StoreEntitySet="Pregunta">
+          <ScalarProperty Name="TipoControlId" ColumnName="TipoControlId" />
+          <ScalarProperty Name="Fecha" ColumnName="Fecha" />
+          <ScalarProperty Name="Nombre" ColumnName="Nombre" />
+          <ScalarProperty Name="PreguntaId" ColumnName="PreguntaId" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="Respuesta">
+      <EntityTypeMapping TypeName="voxpopuliDBModel.Respuesta">
+        <MappingFragment StoreEntitySet="Respuesta">
+          <ScalarProperty Name="Fecha" ColumnName="Fecha" />
+          <ScalarProperty Name="Descripcion" ColumnName="Descripcion" />
+          <ScalarProperty Name="Nombre" ColumnName="Nombre" />
+          <ScalarProperty Name="RespuestaId" ColumnName="RespuestaId" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="RespuestaCampania">
+      <EntityTypeMapping TypeName="voxpopuliDBModel.RespuestaCampania">
+        <MappingFragment StoreEntitySet="RespuestaCampania">
+          <ScalarProperty Name="Fecha" ColumnName="Fecha" />
+          <ScalarProperty Name="Comentarios" ColumnName="Comentarios" />
+          <ScalarProperty Name="ContadorRespuesta" ColumnName="ContadorRespuesta" />
+          <ScalarProperty Name="OpcionRespuesta" ColumnName="OpcionRespuesta" />
+          <ScalarProperty Name="RespuestaId" ColumnName="RespuestaId" />
+          <ScalarProperty Name="PreguntaId" ColumnName="PreguntaId" />
+          <ScalarProperty Name="CampaniaId" ColumnName="CampaniaId" />
+          <ScalarProperty Name="CampaniaDetalleId" ColumnName="CampaniaDetalleId" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="sysdiagrams">
+      <EntityTypeMapping TypeName="voxpopuliDBModel.sysdiagrams">
+        <MappingFragment StoreEntitySet="sysdiagrams">
+          <ScalarProperty Name="definition" ColumnName="definition" />
+          <ScalarProperty Name="version" ColumnName="version" />
+          <ScalarProperty Name="diagram_id" ColumnName="diagram_id" />
+          <ScalarProperty Name="principal_id" ColumnName="principal_id" />
+          <ScalarProperty Name="name" ColumnName="name" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="TipoControl">
+      <EntityTypeMapping TypeName="voxpopuliDBModel.TipoControl">
+        <MappingFragment StoreEntitySet="TipoControl">
+          <ScalarProperty Name="Fecha" ColumnName="Fecha" />
+          <ScalarProperty Name="Nombre" ColumnName="Nombre" />
+          <ScalarProperty Name="TipoControlId" ColumnName="TipoControlId" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+  </EntityContainerMapping>
+</Mapping>

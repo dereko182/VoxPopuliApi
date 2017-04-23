@@ -1,0 +1,268 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Schema Namespace="voxpopuliDBModel" Alias="Self" annotation:UseStrongSpatialTypes="false" xmlns:annotation="http://schemas.microsoft.com/ado/2009/02/edm/annotation" xmlns:customannotation="http://schemas.microsoft.com/ado/2013/11/edm/customannotation" xmlns="http://schemas.microsoft.com/ado/2009/11/edm">
+  <EntityContainer Name="voxpopuliDBEntities" annotation:LazyLoadingEnabled="true">
+    <EntitySet Name="Campania" EntityType="voxpopuliDBModel.Campania" />
+    <EntitySet Name="CampaniaDetalle" EntityType="voxpopuliDBModel.CampaniaDetalle" />
+    <EntitySet Name="ControlPregunta" EntityType="voxpopuliDBModel.ControlPregunta" />
+    <EntitySet Name="ControlVotacion" EntityType="voxpopuliDBModel.ControlVotacion" />
+    <EntitySet Name="Pregunta" EntityType="voxpopuliDBModel.Pregunta" />
+    <EntitySet Name="Respuesta" EntityType="voxpopuliDBModel.Respuesta" />
+    <EntitySet Name="RespuestaCampania" EntityType="voxpopuliDBModel.RespuestaCampania" />
+    <EntitySet Name="sysdiagrams" EntityType="voxpopuliDBModel.sysdiagrams" />
+    <EntitySet Name="TipoControl" EntityType="voxpopuliDBModel.TipoControl" />
+    <AssociationSet Name="FK__ControlVo__Campa__4C6B5938" Association="voxpopuliDBModel.FK__ControlVo__Campa__4C6B5938">
+      <End Role="Campania" EntitySet="Campania" />
+      <End Role="ControlVotacion" EntitySet="ControlVotacion" />
+    </AssociationSet>
+    <AssociationSet Name="FK__Respuesta__Campa__72910220" Association="voxpopuliDBModel.FK__Respuesta__Campa__72910220">
+      <End Role="Campania" EntitySet="Campania" />
+      <End Role="RespuestaCampania" EntitySet="RespuestaCampania" />
+    </AssociationSet>
+    <AssociationSet Name="FK_CampaniaDetalle_Campania" Association="voxpopuliDBModel.FK_CampaniaDetalle_Campania">
+      <End Role="Campania" EntitySet="Campania" />
+      <End Role="CampaniaDetalle" EntitySet="CampaniaDetalle" />
+    </AssociationSet>
+    <AssociationSet Name="FK__CampaniaD__Pregu__498EEC8D" Association="voxpopuliDBModel.FK__CampaniaD__Pregu__498EEC8D">
+      <End Role="Pregunta" EntitySet="Pregunta" />
+      <End Role="CampaniaDetalle" EntitySet="CampaniaDetalle" />
+    </AssociationSet>
+    <AssociationSet Name="FK__ControlPr__Pregu__4A8310C6" Association="voxpopuliDBModel.FK__ControlPr__Pregu__4A8310C6">
+      <End Role="Pregunta" EntitySet="Pregunta" />
+      <End Role="ControlPregunta" EntitySet="ControlPregunta" />
+    </AssociationSet>
+    <AssociationSet Name="FK__ControlPr__Respu__4B7734FF" Association="voxpopuliDBModel.FK__ControlPr__Respu__4B7734FF">
+      <End Role="Respuesta" EntitySet="Respuesta" />
+      <End Role="ControlPregunta" EntitySet="ControlPregunta" />
+    </AssociationSet>
+    <AssociationSet Name="FK__Pregunta__TipoCo__4D5F7D71" Association="voxpopuliDBModel.FK__Pregunta__TipoCo__4D5F7D71">
+      <End Role="TipoControl" EntitySet="TipoControl" />
+      <End Role="Pregunta" EntitySet="Pregunta" />
+    </AssociationSet>
+    <AssociationSet Name="FK__Respuesta__Pregu__74794A92" Association="voxpopuliDBModel.FK__Respuesta__Pregu__74794A92">
+      <End Role="Pregunta" EntitySet="Pregunta" />
+      <End Role="RespuestaCampania" EntitySet="RespuestaCampania" />
+    </AssociationSet>
+    <AssociationSet Name="FK__Respuesta__Respu__73852659" Association="voxpopuliDBModel.FK__Respuesta__Respu__73852659">
+      <End Role="Respuesta" EntitySet="Respuesta" />
+      <End Role="RespuestaCampania" EntitySet="RespuestaCampania" />
+    </AssociationSet>
+  </EntityContainer>
+  <EntityType Name="Campania">
+    <Key>
+      <PropertyRef Name="CampaniaId" />
+    </Key>
+    <Property Name="CampaniaId" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+    <Property Name="Nombre" Type="String" Nullable="false" MaxLength="Max" FixedLength="false" Unicode="false" />
+    <Property Name="Descripcion" Type="String" Nullable="false" MaxLength="Max" FixedLength="false" Unicode="false" />
+    <Property Name="Estatus" Type="Byte" Nullable="false" />
+    <Property Name="TipoCampaniaId" Type="Int32" Nullable="false" />
+    <Property Name="FechaInicia" Type="DateTime" Nullable="false" Precision="3" />
+    <Property Name="FechaFinaliza" Type="DateTime" Nullable="false" Precision="3" />
+    <NavigationProperty Name="ControlVotacion" Relationship="voxpopuliDBModel.FK__ControlVo__Campa__4C6B5938" FromRole="Campania" ToRole="ControlVotacion" />
+    <NavigationProperty Name="RespuestaCampania" Relationship="voxpopuliDBModel.FK__Respuesta__Campa__72910220" FromRole="Campania" ToRole="RespuestaCampania" />
+    <NavigationProperty Name="CampaniaDetalle" Relationship="voxpopuliDBModel.FK_CampaniaDetalle_Campania" FromRole="Campania" ToRole="CampaniaDetalle" />
+  </EntityType>
+  <EntityType Name="CampaniaDetalle">
+    <Key>
+      <PropertyRef Name="CampaniaDetalleId" />
+    </Key>
+    <Property Name="CampaniaDetalleId" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+    <Property Name="CampaniaId" Type="Int32" Nullable="false" />
+    <Property Name="PreguntaId" Type="Int32" Nullable="false" />
+    <Property Name="Orden" Type="Int32" Nullable="false" />
+    <Property Name="Fecha" Type="DateTime" Nullable="false" Precision="3" />
+    <NavigationProperty Name="Campania" Relationship="voxpopuliDBModel.FK_CampaniaDetalle_Campania" FromRole="CampaniaDetalle" ToRole="Campania" />
+    <NavigationProperty Name="Pregunta" Relationship="voxpopuliDBModel.FK__CampaniaD__Pregu__498EEC8D" FromRole="CampaniaDetalle" ToRole="Pregunta" />
+  </EntityType>
+  <EntityType Name="ControlPregunta">
+    <Key>
+      <PropertyRef Name="PreguntaId" />
+      <PropertyRef Name="RespuestaId" />
+    </Key>
+    <Property Name="PreguntaId" Type="Int32" Nullable="false" />
+    <Property Name="RespuestaId" Type="Int32" Nullable="false" />
+    <Property Name="Orden" Type="Int32" Nullable="false" />
+    <Property Name="Fecha" Type="DateTime" Nullable="false" Precision="3" />
+    <NavigationProperty Name="Pregunta" Relationship="voxpopuliDBModel.FK__ControlPr__Pregu__4A8310C6" FromRole="ControlPregunta" ToRole="Pregunta" />
+    <NavigationProperty Name="Respuesta" Relationship="voxpopuliDBModel.FK__ControlPr__Respu__4B7734FF" FromRole="ControlPregunta" ToRole="Respuesta" />
+  </EntityType>
+  <EntityType Name="ControlVotacion">
+    <Key>
+      <PropertyRef Name="CampaniaId" />
+      <PropertyRef Name="DeviceId" />
+    </Key>
+    <Property Name="CampaniaId" Type="Int32" Nullable="false" />
+    <Property Name="DeviceId" Type="String" Nullable="false" MaxLength="50" FixedLength="false" Unicode="false" />
+    <Property Name="Latitud" Type="String" Nullable="false" MaxLength="Max" FixedLength="false" Unicode="false" />
+    <Property Name="Longitud" Type="String" Nullable="false" MaxLength="Max" FixedLength="false" Unicode="false" />
+    <Property Name="Fecha" Type="DateTime" Nullable="false" Precision="3" />
+    <NavigationProperty Name="Campania" Relationship="voxpopuliDBModel.FK__ControlVo__Campa__4C6B5938" FromRole="ControlVotacion" ToRole="Campania" />
+  </EntityType>
+  <EntityType Name="Pregunta">
+    <Key>
+      <PropertyRef Name="PreguntaId" />
+    </Key>
+    <Property Name="PreguntaId" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+    <Property Name="Nombre" Type="String" Nullable="false" MaxLength="Max" FixedLength="false" Unicode="false" />
+    <Property Name="Fecha" Type="DateTime" Nullable="false" Precision="3" />
+    <Property Name="TipoControlId" Type="Int32" Nullable="false" />
+    <NavigationProperty Name="CampaniaDetalle" Relationship="voxpopuliDBModel.FK__CampaniaD__Pregu__498EEC8D" FromRole="Pregunta" ToRole="CampaniaDetalle" />
+    <NavigationProperty Name="ControlPregunta" Relationship="voxpopuliDBModel.FK__ControlPr__Pregu__4A8310C6" FromRole="Pregunta" ToRole="ControlPregunta" />
+    <NavigationProperty Name="TipoControl" Relationship="voxpopuliDBModel.FK__Pregunta__TipoCo__4D5F7D71" FromRole="Pregunta" ToRole="TipoControl" />
+    <NavigationProperty Name="RespuestaCampania" Relationship="voxpopuliDBModel.FK__Respuesta__Pregu__74794A92" FromRole="Pregunta" ToRole="RespuestaCampania" />
+  </EntityType>
+  <EntityType Name="Respuesta">
+    <Key>
+      <PropertyRef Name="RespuestaId" />
+    </Key>
+    <Property Name="RespuestaId" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+    <Property Name="Nombre" Type="String" Nullable="false" MaxLength="Max" FixedLength="false" Unicode="false" />
+    <Property Name="Descripcion" Type="String" Nullable="false" MaxLength="Max" FixedLength="false" Unicode="false" />
+    <Property Name="Fecha" Type="DateTime" Nullable="false" Precision="3" />
+    <NavigationProperty Name="ControlPregunta" Relationship="voxpopuliDBModel.FK__ControlPr__Respu__4B7734FF" FromRole="Respuesta" ToRole="ControlPregunta" />
+    <NavigationProperty Name="RespuestaCampania" Relationship="voxpopuliDBModel.FK__Respuesta__Respu__73852659" FromRole="Respuesta" ToRole="RespuestaCampania" />
+  </EntityType>
+  <EntityType Name="RespuestaCampania">
+    <Key>
+      <PropertyRef Name="CampaniaDetalleId" />
+    </Key>
+    <Property Name="CampaniaDetalleId" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+    <Property Name="CampaniaId" Type="Int32" Nullable="false" />
+    <Property Name="PreguntaId" Type="Int32" Nullable="false" />
+    <Property Name="RespuestaId" Type="Int32" Nullable="false" />
+    <Property Name="OpcionRespuesta" Type="Byte" Nullable="false" />
+    <Property Name="ContadorRespuesta" Type="Int32" Nullable="false" />
+    <Property Name="Comentarios" Type="String" Nullable="false" MaxLength="Max" FixedLength="false" Unicode="false" />
+    <Property Name="Fecha" Type="DateTime" Nullable="false" Precision="3" />
+    <NavigationProperty Name="Campania" Relationship="voxpopuliDBModel.FK__Respuesta__Campa__72910220" FromRole="RespuestaCampania" ToRole="Campania" />
+    <NavigationProperty Name="Pregunta" Relationship="voxpopuliDBModel.FK__Respuesta__Pregu__74794A92" FromRole="RespuestaCampania" ToRole="Pregunta" />
+    <NavigationProperty Name="Respuesta" Relationship="voxpopuliDBModel.FK__Respuesta__Respu__73852659" FromRole="RespuestaCampania" ToRole="Respuesta" />
+  </EntityType>
+  <EntityType Name="sysdiagrams">
+    <Key>
+      <PropertyRef Name="diagram_id" />
+    </Key>
+    <Property Name="name" Type="String" Nullable="false" MaxLength="128" FixedLength="false" Unicode="true" />
+    <Property Name="principal_id" Type="Int32" Nullable="false" />
+    <Property Name="diagram_id" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+    <Property Name="version" Type="Int32" />
+    <Property Name="definition" Type="Binary" MaxLength="Max" FixedLength="false" />
+  </EntityType>
+  <EntityType Name="TipoControl">
+    <Key>
+      <PropertyRef Name="TipoControlId" />
+    </Key>
+    <Property Name="TipoControlId" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+    <Property Name="Nombre" Type="String" Nullable="false" MaxLength="Max" FixedLength="false" Unicode="false" />
+    <Property Name="Fecha" Type="DateTime" Nullable="false" Precision="3" />
+    <NavigationProperty Name="Pregunta" Relationship="voxpopuliDBModel.FK__Pregunta__TipoCo__4D5F7D71" FromRole="TipoControl" ToRole="Pregunta" />
+  </EntityType>
+  <Association Name="FK__ControlVo__Campa__4C6B5938">
+    <End Type="voxpopuliDBModel.Campania" Role="Campania" Multiplicity="1" />
+    <End Type="voxpopuliDBModel.ControlVotacion" Role="ControlVotacion" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="Campania">
+        <PropertyRef Name="CampaniaId" />
+      </Principal>
+      <Dependent Role="ControlVotacion">
+        <PropertyRef Name="CampaniaId" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="FK__Respuesta__Campa__72910220">
+    <End Type="voxpopuliDBModel.Campania" Role="Campania" Multiplicity="1" />
+    <End Type="voxpopuliDBModel.RespuestaCampania" Role="RespuestaCampania" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="Campania">
+        <PropertyRef Name="CampaniaId" />
+      </Principal>
+      <Dependent Role="RespuestaCampania">
+        <PropertyRef Name="CampaniaId" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="FK_CampaniaDetalle_Campania">
+    <End Type="voxpopuliDBModel.Campania" Role="Campania" Multiplicity="1" />
+    <End Type="voxpopuliDBModel.CampaniaDetalle" Role="CampaniaDetalle" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="Campania">
+        <PropertyRef Name="CampaniaId" />
+      </Principal>
+      <Dependent Role="CampaniaDetalle">
+        <PropertyRef Name="CampaniaId" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="FK__CampaniaD__Pregu__498EEC8D">
+    <End Type="voxpopuliDBModel.Pregunta" Role="Pregunta" Multiplicity="1" />
+    <End Type="voxpopuliDBModel.CampaniaDetalle" Role="CampaniaDetalle" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="Pregunta">
+        <PropertyRef Name="PreguntaId" />
+      </Principal>
+      <Dependent Role="CampaniaDetalle">
+        <PropertyRef Name="PreguntaId" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="FK__ControlPr__Pregu__4A8310C6">
+    <End Type="voxpopuliDBModel.Pregunta" Role="Pregunta" Multiplicity="1" />
+    <End Type="voxpopuliDBModel.ControlPregunta" Role="ControlPregunta" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="Pregunta">
+        <PropertyRef Name="PreguntaId" />
+      </Principal>
+      <Dependent Role="ControlPregunta">
+        <PropertyRef Name="PreguntaId" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="FK__ControlPr__Respu__4B7734FF">
+    <End Type="voxpopuliDBModel.Respuesta" Role="Respuesta" Multiplicity="1" />
+    <End Type="voxpopuliDBModel.ControlPregunta" Role="ControlPregunta" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="Respuesta">
+        <PropertyRef Name="RespuestaId" />
+      </Principal>
+      <Dependent Role="ControlPregunta">
+        <PropertyRef Name="RespuestaId" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="FK__Pregunta__TipoCo__4D5F7D71">
+    <End Type="voxpopuliDBModel.TipoControl" Role="TipoControl" Multiplicity="1" />
+    <End Type="voxpopuliDBModel.Pregunta" Role="Pregunta" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="TipoControl">
+        <PropertyRef Name="TipoControlId" />
+      </Principal>
+      <Dependent Role="Pregunta">
+        <PropertyRef Name="TipoControlId" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="FK__Respuesta__Pregu__74794A92">
+    <End Type="voxpopuliDBModel.Pregunta" Role="Pregunta" Multiplicity="1" />
+    <End Type="voxpopuliDBModel.RespuestaCampania" Role="RespuestaCampania" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="Pregunta">
+        <PropertyRef Name="PreguntaId" />
+      </Principal>
+      <Dependent Role="RespuestaCampania">
+        <PropertyRef Name="PreguntaId" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="FK__Respuesta__Respu__73852659">
+    <End Type="voxpopuliDBModel.Respuesta" Role="Respuesta" Multiplicity="1" />
+    <End Type="voxpopuliDBModel.RespuestaCampania" Role="RespuestaCampania" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="Respuesta">
+        <PropertyRef Name="RespuestaId" />
+      </Principal>
+      <Dependent Role="RespuestaCampania">
+        <PropertyRef Name="RespuestaId" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+</Schema>

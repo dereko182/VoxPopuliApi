@@ -1,0 +1,652 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<edmx:Edmx Version="3.0" xmlns:edmx="http://schemas.microsoft.com/ado/2009/11/edmx">
+  <!-- EF Runtime content -->
+  <edmx:Runtime>
+    <!-- SSDL content -->
+    <edmx:StorageModels>
+    <Schema Namespace="voxpopuliDBModel.Store" Provider="System.Data.SqlClient" ProviderManifestToken="2012" Alias="Self" xmlns:store="http://schemas.microsoft.com/ado/2007/12/edm/EntityStoreSchemaGenerator" xmlns:customannotation="http://schemas.microsoft.com/ado/2013/11/edm/customannotation" xmlns="http://schemas.microsoft.com/ado/2009/11/edm/ssdl">
+        <EntityType Name="Campania">
+          <Key>
+            <PropertyRef Name="CampaniaId" />
+          </Key>
+          <Property Name="CampaniaId" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
+          <Property Name="Nombre" Type="text" Nullable="false" />
+          <Property Name="Descripcion" Type="text" Nullable="false" />
+          <Property Name="Estatus" Type="tinyint" Nullable="false" />
+          <Property Name="TipoCampaniaId" Type="int" Nullable="false" />
+          <Property Name="FechaInicia" Type="datetime" Nullable="false" />
+          <Property Name="FechaFinaliza" Type="datetime" Nullable="false" />
+        </EntityType>
+        <EntityType Name="CampaniaDetalle">
+          <Key>
+            <PropertyRef Name="CampaniaDetalleId" />
+          </Key>
+          <Property Name="CampaniaDetalleId" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
+          <Property Name="CampaniaId" Type="int" Nullable="false" />
+          <Property Name="PreguntaId" Type="int" Nullable="false" />
+          <Property Name="Orden" Type="int" Nullable="false" />
+          <Property Name="Fecha" Type="datetime" Nullable="false" />
+        </EntityType>
+        <EntityType Name="ControlPregunta">
+          <Key>
+            <PropertyRef Name="PreguntaId" />
+            <PropertyRef Name="RespuestaId" />
+          </Key>
+          <Property Name="PreguntaId" Type="int" Nullable="false" />
+          <Property Name="RespuestaId" Type="int" Nullable="false" />
+          <Property Name="Orden" Type="int" Nullable="false" />
+          <Property Name="Fecha" Type="datetime" Nullable="false" />
+        </EntityType>
+        <EntityType Name="ControlVotacion">
+          <Key>
+            <PropertyRef Name="CampaniaId" />
+            <PropertyRef Name="DeviceId" />
+          </Key>
+          <Property Name="CampaniaId" Type="int" Nullable="false" />
+          <Property Name="DeviceId" Type="varchar" MaxLength="50" Nullable="false" />
+          <Property Name="Latitud" Type="text" Nullable="false" />
+          <Property Name="Longitud" Type="text" Nullable="false" />
+          <Property Name="Fecha" Type="datetime" Nullable="false" />
+        </EntityType>
+        <EntityType Name="Pregunta">
+          <Key>
+            <PropertyRef Name="PreguntaId" />
+          </Key>
+          <Property Name="PreguntaId" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
+          <Property Name="Nombre" Type="text" Nullable="false" />
+          <Property Name="Fecha" Type="datetime" Nullable="false" />
+          <Property Name="TipoControlId" Type="int" Nullable="false" />
+        </EntityType>
+        <EntityType Name="Respuesta">
+          <Key>
+            <PropertyRef Name="RespuestaId" />
+          </Key>
+          <Property Name="RespuestaId" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
+          <Property Name="Nombre" Type="text" Nullable="false" />
+          <Property Name="Descripcion" Type="text" Nullable="false" />
+          <Property Name="Fecha" Type="datetime" Nullable="false" />
+        </EntityType>
+        <EntityType Name="RespuestaCampania">
+          <Key>
+            <PropertyRef Name="CampaniaDetalleId" />
+          </Key>
+          <Property Name="CampaniaDetalleId" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
+          <Property Name="CampaniaId" Type="int" Nullable="false" />
+          <Property Name="PreguntaId" Type="int" Nullable="false" />
+          <Property Name="RespuestaId" Type="int" Nullable="false" />
+          <Property Name="OpcionRespuesta" Type="tinyint" Nullable="false" />
+          <Property Name="ContadorRespuesta" Type="int" Nullable="false" />
+          <Property Name="Comentarios" Type="text" Nullable="false" />
+          <Property Name="Fecha" Type="datetime" Nullable="false" />
+        </EntityType>
+        <EntityType Name="sysdiagrams">
+          <Key>
+            <PropertyRef Name="diagram_id" />
+          </Key>
+          <Property Name="name" Type="nvarchar" MaxLength="128" Nullable="false" />
+          <Property Name="principal_id" Type="int" Nullable="false" />
+          <Property Name="diagram_id" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
+          <Property Name="version" Type="int" />
+          <Property Name="definition" Type="varbinary(max)" />
+        </EntityType>
+        <EntityType Name="TipoControl">
+          <Key>
+            <PropertyRef Name="TipoControlId" />
+          </Key>
+          <Property Name="TipoControlId" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
+          <Property Name="Nombre" Type="text" Nullable="false" />
+          <Property Name="Fecha" Type="datetime" Nullable="false" />
+        </EntityType>
+        <Association Name="FK__CampaniaD__Pregu__498EEC8D">
+          <End Role="Pregunta" Type="Self.Pregunta" Multiplicity="1" />
+          <End Role="CampaniaDetalle" Type="Self.CampaniaDetalle" Multiplicity="*" />
+          <ReferentialConstraint>
+            <Principal Role="Pregunta">
+              <PropertyRef Name="PreguntaId" />
+            </Principal>
+            <Dependent Role="CampaniaDetalle">
+              <PropertyRef Name="PreguntaId" />
+            </Dependent>
+          </ReferentialConstraint>
+        </Association>
+        <Association Name="FK__ControlPr__Pregu__4A8310C6">
+          <End Role="Pregunta" Type="Self.Pregunta" Multiplicity="1" />
+          <End Role="ControlPregunta" Type="Self.ControlPregunta" Multiplicity="*" />
+          <ReferentialConstraint>
+            <Principal Role="Pregunta">
+              <PropertyRef Name="PreguntaId" />
+            </Principal>
+            <Dependent Role="ControlPregunta">
+              <PropertyRef Name="PreguntaId" />
+            </Dependent>
+          </ReferentialConstraint>
+        </Association>
+        <Association Name="FK__ControlPr__Respu__4B7734FF">
+          <End Role="Respuesta" Type="Self.Respuesta" Multiplicity="1" />
+          <End Role="ControlPregunta" Type="Self.ControlPregunta" Multiplicity="*" />
+          <ReferentialConstraint>
+            <Principal Role="Respuesta">
+              <PropertyRef Name="RespuestaId" />
+            </Principal>
+            <Dependent Role="ControlPregunta">
+              <PropertyRef Name="RespuestaId" />
+            </Dependent>
+          </ReferentialConstraint>
+        </Association>
+        <Association Name="FK__ControlVo__Campa__4C6B5938">
+          <End Role="Campania" Type="Self.Campania" Multiplicity="1" />
+          <End Role="ControlVotacion" Type="Self.ControlVotacion" Multiplicity="*" />
+          <ReferentialConstraint>
+            <Principal Role="Campania">
+              <PropertyRef Name="CampaniaId" />
+            </Principal>
+            <Dependent Role="ControlVotacion">
+              <PropertyRef Name="CampaniaId" />
+            </Dependent>
+          </ReferentialConstraint>
+        </Association>
+        <Association Name="FK__Pregunta__TipoCo__4D5F7D71">
+          <End Role="TipoControl" Type="Self.TipoControl" Multiplicity="1" />
+          <End Role="Pregunta" Type="Self.Pregunta" Multiplicity="*" />
+          <ReferentialConstraint>
+            <Principal Role="TipoControl">
+              <PropertyRef Name="TipoControlId" />
+            </Principal>
+            <Dependent Role="Pregunta">
+              <PropertyRef Name="TipoControlId" />
+            </Dependent>
+          </ReferentialConstraint>
+        </Association>
+        <Association Name="FK__Respuesta__Campa__72910220">
+          <End Role="Campania" Type="Self.Campania" Multiplicity="1" />
+          <End Role="RespuestaCampania" Type="Self.RespuestaCampania" Multiplicity="*" />
+          <ReferentialConstraint>
+            <Principal Role="Campania">
+              <PropertyRef Name="CampaniaId" />
+            </Principal>
+            <Dependent Role="RespuestaCampania">
+              <PropertyRef Name="CampaniaId" />
+            </Dependent>
+          </ReferentialConstraint>
+        </Association>
+        <Association Name="FK__Respuesta__Pregu__74794A92">
+          <End Role="Pregunta" Type="Self.Pregunta" Multiplicity="1" />
+          <End Role="RespuestaCampania" Type="Self.RespuestaCampania" Multiplicity="*" />
+          <ReferentialConstraint>
+            <Principal Role="Pregunta">
+              <PropertyRef Name="PreguntaId" />
+            </Principal>
+            <Dependent Role="RespuestaCampania">
+              <PropertyRef Name="PreguntaId" />
+            </Dependent>
+          </ReferentialConstraint>
+        </Association>
+        <Association Name="FK__Respuesta__Respu__73852659">
+          <End Role="Respuesta" Type="Self.Respuesta" Multiplicity="1" />
+          <End Role="RespuestaCampania" Type="Self.RespuestaCampania" Multiplicity="*" />
+          <ReferentialConstraint>
+            <Principal Role="Respuesta">
+              <PropertyRef Name="RespuestaId" />
+            </Principal>
+            <Dependent Role="RespuestaCampania">
+              <PropertyRef Name="RespuestaId" />
+            </Dependent>
+          </ReferentialConstraint>
+        </Association>
+        <Association Name="FK_CampaniaDetalle_Campania">
+          <End Role="Campania" Type="Self.Campania" Multiplicity="1" />
+          <End Role="CampaniaDetalle" Type="Self.CampaniaDetalle" Multiplicity="*" />
+          <ReferentialConstraint>
+            <Principal Role="Campania">
+              <PropertyRef Name="CampaniaId" />
+            </Principal>
+            <Dependent Role="CampaniaDetalle">
+              <PropertyRef Name="CampaniaId" />
+            </Dependent>
+          </ReferentialConstraint>
+        </Association>
+        <EntityContainer Name="voxpopuliDBModelStoreContainer">
+          <EntitySet Name="Campania" EntityType="Self.Campania" Schema="dbo" store:Type="Tables" />
+          <EntitySet Name="CampaniaDetalle" EntityType="Self.CampaniaDetalle" Schema="dbo" store:Type="Tables" />
+          <EntitySet Name="ControlPregunta" EntityType="Self.ControlPregunta" Schema="dbo" store:Type="Tables" />
+          <EntitySet Name="ControlVotacion" EntityType="Self.ControlVotacion" Schema="dbo" store:Type="Tables" />
+          <EntitySet Name="Pregunta" EntityType="Self.Pregunta" Schema="dbo" store:Type="Tables" />
+          <EntitySet Name="Respuesta" EntityType="Self.Respuesta" Schema="dbo" store:Type="Tables" />
+          <EntitySet Name="RespuestaCampania" EntityType="Self.RespuestaCampania" Schema="dbo" store:Type="Tables" />
+          <EntitySet Name="sysdiagrams" EntityType="Self.sysdiagrams" Schema="dbo" store:Type="Tables" />
+          <EntitySet Name="TipoControl" EntityType="Self.TipoControl" Schema="dbo" store:Type="Tables" />
+          <AssociationSet Name="FK__CampaniaD__Pregu__498EEC8D" Association="Self.FK__CampaniaD__Pregu__498EEC8D">
+            <End Role="Pregunta" EntitySet="Pregunta" />
+            <End Role="CampaniaDetalle" EntitySet="CampaniaDetalle" />
+          </AssociationSet>
+          <AssociationSet Name="FK__ControlPr__Pregu__4A8310C6" Association="Self.FK__ControlPr__Pregu__4A8310C6">
+            <End Role="Pregunta" EntitySet="Pregunta" />
+            <End Role="ControlPregunta" EntitySet="ControlPregunta" />
+          </AssociationSet>
+          <AssociationSet Name="FK__ControlPr__Respu__4B7734FF" Association="Self.FK__ControlPr__Respu__4B7734FF">
+            <End Role="Respuesta" EntitySet="Respuesta" />
+            <End Role="ControlPregunta" EntitySet="ControlPregunta" />
+          </AssociationSet>
+          <AssociationSet Name="FK__ControlVo__Campa__4C6B5938" Association="Self.FK__ControlVo__Campa__4C6B5938">
+            <End Role="Campania" EntitySet="Campania" />
+            <End Role="ControlVotacion" EntitySet="ControlVotacion" />
+          </AssociationSet>
+          <AssociationSet Name="FK__Pregunta__TipoCo__4D5F7D71" Association="Self.FK__Pregunta__TipoCo__4D5F7D71">
+            <End Role="TipoControl" EntitySet="TipoControl" />
+            <End Role="Pregunta" EntitySet="Pregunta" />
+          </AssociationSet>
+          <AssociationSet Name="FK__Respuesta__Campa__72910220" Association="Self.FK__Respuesta__Campa__72910220">
+            <End Role="Campania" EntitySet="Campania" />
+            <End Role="RespuestaCampania" EntitySet="RespuestaCampania" />
+          </AssociationSet>
+          <AssociationSet Name="FK__Respuesta__Pregu__74794A92" Association="Self.FK__Respuesta__Pregu__74794A92">
+            <End Role="Pregunta" EntitySet="Pregunta" />
+            <End Role="RespuestaCampania" EntitySet="RespuestaCampania" />
+          </AssociationSet>
+          <AssociationSet Name="FK__Respuesta__Respu__73852659" Association="Self.FK__Respuesta__Respu__73852659">
+            <End Role="Respuesta" EntitySet="Respuesta" />
+            <End Role="RespuestaCampania" EntitySet="RespuestaCampania" />
+          </AssociationSet>
+          <AssociationSet Name="FK_CampaniaDetalle_Campania" Association="Self.FK_CampaniaDetalle_Campania">
+            <End Role="Campania" EntitySet="Campania" />
+            <End Role="CampaniaDetalle" EntitySet="CampaniaDetalle" />
+          </AssociationSet>
+        </EntityContainer>
+      </Schema></edmx:StorageModels>
+    <!-- CSDL content -->
+    <edmx:ConceptualModels>
+      <Schema Namespace="voxpopuliDBModel" Alias="Self" annotation:UseStrongSpatialTypes="false" xmlns:annotation="http://schemas.microsoft.com/ado/2009/02/edm/annotation" xmlns:customannotation="http://schemas.microsoft.com/ado/2013/11/edm/customannotation" xmlns="http://schemas.microsoft.com/ado/2009/11/edm">
+        <EntityContainer Name="voxpopuliDBEntities" annotation:LazyLoadingEnabled="true">
+          <EntitySet Name="Campania" EntityType="voxpopuliDBModel.Campania" />
+          <EntitySet Name="CampaniaDetalle" EntityType="voxpopuliDBModel.CampaniaDetalle" />
+          <EntitySet Name="ControlPregunta" EntityType="voxpopuliDBModel.ControlPregunta" />
+          <EntitySet Name="ControlVotacion" EntityType="voxpopuliDBModel.ControlVotacion" />
+          <EntitySet Name="Pregunta" EntityType="voxpopuliDBModel.Pregunta" />
+          <EntitySet Name="Respuesta" EntityType="voxpopuliDBModel.Respuesta" />
+          <EntitySet Name="RespuestaCampania" EntityType="voxpopuliDBModel.RespuestaCampania" />
+          <EntitySet Name="sysdiagrams" EntityType="voxpopuliDBModel.sysdiagrams" />
+          <EntitySet Name="TipoControl" EntityType="voxpopuliDBModel.TipoControl" />
+          <AssociationSet Name="FK__ControlVo__Campa__4C6B5938" Association="voxpopuliDBModel.FK__ControlVo__Campa__4C6B5938">
+            <End Role="Campania" EntitySet="Campania" />
+            <End Role="ControlVotacion" EntitySet="ControlVotacion" />
+          </AssociationSet>
+          <AssociationSet Name="FK__Respuesta__Campa__72910220" Association="voxpopuliDBModel.FK__Respuesta__Campa__72910220">
+            <End Role="Campania" EntitySet="Campania" />
+            <End Role="RespuestaCampania" EntitySet="RespuestaCampania" />
+          </AssociationSet>
+          <AssociationSet Name="FK_CampaniaDetalle_Campania" Association="voxpopuliDBModel.FK_CampaniaDetalle_Campania">
+            <End Role="Campania" EntitySet="Campania" />
+            <End Role="CampaniaDetalle" EntitySet="CampaniaDetalle" />
+          </AssociationSet>
+          <AssociationSet Name="FK__CampaniaD__Pregu__498EEC8D" Association="voxpopuliDBModel.FK__CampaniaD__Pregu__498EEC8D">
+            <End Role="Pregunta" EntitySet="Pregunta" />
+            <End Role="CampaniaDetalle" EntitySet="CampaniaDetalle" />
+          </AssociationSet>
+          <AssociationSet Name="FK__ControlPr__Pregu__4A8310C6" Association="voxpopuliDBModel.FK__ControlPr__Pregu__4A8310C6">
+            <End Role="Pregunta" EntitySet="Pregunta" />
+            <End Role="ControlPregunta" EntitySet="ControlPregunta" />
+          </AssociationSet>
+          <AssociationSet Name="FK__ControlPr__Respu__4B7734FF" Association="voxpopuliDBModel.FK__ControlPr__Respu__4B7734FF">
+            <End Role="Respuesta" EntitySet="Respuesta" />
+            <End Role="ControlPregunta" EntitySet="ControlPregunta" />
+          </AssociationSet>
+          <AssociationSet Name="FK__Pregunta__TipoCo__4D5F7D71" Association="voxpopuliDBModel.FK__Pregunta__TipoCo__4D5F7D71">
+            <End Role="TipoControl" EntitySet="TipoControl" />
+            <End Role="Pregunta" EntitySet="Pregunta" />
+          </AssociationSet>
+          <AssociationSet Name="FK__Respuesta__Pregu__74794A92" Association="voxpopuliDBModel.FK__Respuesta__Pregu__74794A92">
+            <End Role="Pregunta" EntitySet="Pregunta" />
+            <End Role="RespuestaCampania" EntitySet="RespuestaCampania" />
+          </AssociationSet>
+          <AssociationSet Name="FK__Respuesta__Respu__73852659" Association="voxpopuliDBModel.FK__Respuesta__Respu__73852659">
+            <End Role="Respuesta" EntitySet="Respuesta" />
+            <End Role="RespuestaCampania" EntitySet="RespuestaCampania" />
+          </AssociationSet>
+        </EntityContainer>
+        <EntityType Name="Campania">
+          <Key>
+            <PropertyRef Name="CampaniaId" />
+          </Key>
+          <Property Name="CampaniaId" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+          <Property Name="Nombre" Type="String" Nullable="false" MaxLength="Max" FixedLength="false" Unicode="false" />
+          <Property Name="Descripcion" Type="String" Nullable="false" MaxLength="Max" FixedLength="false" Unicode="false" />
+          <Property Name="Estatus" Type="Byte" Nullable="false" />
+          <Property Name="TipoCampaniaId" Type="Int32" Nullable="false" />
+          <Property Name="FechaInicia" Type="DateTime" Nullable="false" Precision="3" />
+          <Property Name="FechaFinaliza" Type="DateTime" Nullable="false" Precision="3" />
+          <NavigationProperty Name="ControlVotacion" Relationship="voxpopuliDBModel.FK__ControlVo__Campa__4C6B5938" FromRole="Campania" ToRole="ControlVotacion" />
+          <NavigationProperty Name="RespuestaCampania" Relationship="voxpopuliDBModel.FK__Respuesta__Campa__72910220" FromRole="Campania" ToRole="RespuestaCampania" />
+          <NavigationProperty Name="CampaniaDetalle" Relationship="voxpopuliDBModel.FK_CampaniaDetalle_Campania" FromRole="Campania" ToRole="CampaniaDetalle" />
+        </EntityType>
+        <EntityType Name="CampaniaDetalle">
+          <Key>
+            <PropertyRef Name="CampaniaDetalleId" />
+          </Key>
+          <Property Name="CampaniaDetalleId" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+          <Property Name="CampaniaId" Type="Int32" Nullable="false" />
+          <Property Name="PreguntaId" Type="Int32" Nullable="false" />
+          <Property Name="Orden" Type="Int32" Nullable="false" />
+          <Property Name="Fecha" Type="DateTime" Nullable="false" Precision="3" />
+          <NavigationProperty Name="Campania" Relationship="voxpopuliDBModel.FK_CampaniaDetalle_Campania" FromRole="CampaniaDetalle" ToRole="Campania" />
+          <NavigationProperty Name="Pregunta" Relationship="voxpopuliDBModel.FK__CampaniaD__Pregu__498EEC8D" FromRole="CampaniaDetalle" ToRole="Pregunta" />
+        </EntityType>
+        <EntityType Name="ControlPregunta">
+          <Key>
+            <PropertyRef Name="PreguntaId" />
+            <PropertyRef Name="RespuestaId" />
+          </Key>
+          <Property Name="PreguntaId" Type="Int32" Nullable="false" />
+          <Property Name="RespuestaId" Type="Int32" Nullable="false" />
+          <Property Name="Orden" Type="Int32" Nullable="false" />
+          <Property Name="Fecha" Type="DateTime" Nullable="false" Precision="3" />
+          <NavigationProperty Name="Pregunta" Relationship="voxpopuliDBModel.FK__ControlPr__Pregu__4A8310C6" FromRole="ControlPregunta" ToRole="Pregunta" />
+          <NavigationProperty Name="Respuesta" Relationship="voxpopuliDBModel.FK__ControlPr__Respu__4B7734FF" FromRole="ControlPregunta" ToRole="Respuesta" />
+        </EntityType>
+        <EntityType Name="ControlVotacion">
+          <Key>
+            <PropertyRef Name="CampaniaId" />
+            <PropertyRef Name="DeviceId" />
+          </Key>
+          <Property Name="CampaniaId" Type="Int32" Nullable="false" />
+          <Property Name="DeviceId" Type="String" Nullable="false" MaxLength="50" FixedLength="false" Unicode="false" />
+          <Property Name="Latitud" Type="String" Nullable="false" MaxLength="Max" FixedLength="false" Unicode="false" />
+          <Property Name="Longitud" Type="String" Nullable="false" MaxLength="Max" FixedLength="false" Unicode="false" />
+          <Property Name="Fecha" Type="DateTime" Nullable="false" Precision="3" />
+          <NavigationProperty Name="Campania" Relationship="voxpopuliDBModel.FK__ControlVo__Campa__4C6B5938" FromRole="ControlVotacion" ToRole="Campania" />
+        </EntityType>
+        <EntityType Name="Pregunta">
+          <Key>
+            <PropertyRef Name="PreguntaId" />
+          </Key>
+          <Property Name="PreguntaId" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+          <Property Name="Nombre" Type="String" Nullable="false" MaxLength="Max" FixedLength="false" Unicode="false" />
+          <Property Name="Fecha" Type="DateTime" Nullable="false" Precision="3" />
+          <Property Name="TipoControlId" Type="Int32" Nullable="false" />
+          <NavigationProperty Name="CampaniaDetalle" Relationship="voxpopuliDBModel.FK__CampaniaD__Pregu__498EEC8D" FromRole="Pregunta" ToRole="CampaniaDetalle" />
+          <NavigationProperty Name="ControlPregunta" Relationship="voxpopuliDBModel.FK__ControlPr__Pregu__4A8310C6" FromRole="Pregunta" ToRole="ControlPregunta" />
+          <NavigationProperty Name="TipoControl" Relationship="voxpopuliDBModel.FK__Pregunta__TipoCo__4D5F7D71" FromRole="Pregunta" ToRole="TipoControl" />
+          <NavigationProperty Name="RespuestaCampania" Relationship="voxpopuliDBModel.FK__Respuesta__Pregu__74794A92" FromRole="Pregunta" ToRole="RespuestaCampania" />
+        </EntityType>
+        <EntityType Name="Respuesta">
+          <Key>
+            <PropertyRef Name="RespuestaId" />
+          </Key>
+          <Property Name="RespuestaId" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+          <Property Name="Nombre" Type="String" Nullable="false" MaxLength="Max" FixedLength="false" Unicode="false" />
+          <Property Name="Descripcion" Type="String" Nullable="false" MaxLength="Max" FixedLength="false" Unicode="false" />
+          <Property Name="Fecha" Type="DateTime" Nullable="false" Precision="3" />
+          <NavigationProperty Name="ControlPregunta" Relationship="voxpopuliDBModel.FK__ControlPr__Respu__4B7734FF" FromRole="Respuesta" ToRole="ControlPregunta" />
+          <NavigationProperty Name="RespuestaCampania" Relationship="voxpopuliDBModel.FK__Respuesta__Respu__73852659" FromRole="Respuesta" ToRole="RespuestaCampania" />
+        </EntityType>
+        <EntityType Name="RespuestaCampania">
+          <Key>
+            <PropertyRef Name="CampaniaDetalleId" />
+          </Key>
+          <Property Name="CampaniaDetalleId" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+          <Property Name="CampaniaId" Type="Int32" Nullable="false" />
+          <Property Name="PreguntaId" Type="Int32" Nullable="false" />
+          <Property Name="RespuestaId" Type="Int32" Nullable="false" />
+          <Property Name="OpcionRespuesta" Type="Byte" Nullable="false" />
+          <Property Name="ContadorRespuesta" Type="Int32" Nullable="false" />
+          <Property Name="Comentarios" Type="String" Nullable="false" MaxLength="Max" FixedLength="false" Unicode="false" />
+          <Property Name="Fecha" Type="DateTime" Nullable="false" Precision="3" />
+          <NavigationProperty Name="Campania" Relationship="voxpopuliDBModel.FK__Respuesta__Campa__72910220" FromRole="RespuestaCampania" ToRole="Campania" />
+          <NavigationProperty Name="Pregunta" Relationship="voxpopuliDBModel.FK__Respuesta__Pregu__74794A92" FromRole="RespuestaCampania" ToRole="Pregunta" />
+          <NavigationProperty Name="Respuesta" Relationship="voxpopuliDBModel.FK__Respuesta__Respu__73852659" FromRole="RespuestaCampania" ToRole="Respuesta" />
+        </EntityType>
+        <EntityType Name="sysdiagrams">
+          <Key>
+            <PropertyRef Name="diagram_id" />
+          </Key>
+          <Property Name="name" Type="String" Nullable="false" MaxLength="128" FixedLength="false" Unicode="true" />
+          <Property Name="principal_id" Type="Int32" Nullable="false" />
+          <Property Name="diagram_id" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+          <Property Name="version" Type="Int32" />
+          <Property Name="definition" Type="Binary" MaxLength="Max" FixedLength="false" />
+        </EntityType>
+        <EntityType Name="TipoControl">
+          <Key>
+            <PropertyRef Name="TipoControlId" />
+          </Key>
+          <Property Name="TipoControlId" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+          <Property Name="Nombre" Type="String" Nullable="false" MaxLength="Max" FixedLength="false" Unicode="false" />
+          <Property Name="Fecha" Type="DateTime" Nullable="false" Precision="3" />
+          <NavigationProperty Name="Pregunta" Relationship="voxpopuliDBModel.FK__Pregunta__TipoCo__4D5F7D71" FromRole="TipoControl" ToRole="Pregunta" />
+        </EntityType>
+        <Association Name="FK__ControlVo__Campa__4C6B5938">
+          <End Type="voxpopuliDBModel.Campania" Role="Campania" Multiplicity="1" />
+          <End Type="voxpopuliDBModel.ControlVotacion" Role="ControlVotacion" Multiplicity="*" />
+          <ReferentialConstraint>
+            <Principal Role="Campania">
+              <PropertyRef Name="CampaniaId" />
+            </Principal>
+            <Dependent Role="ControlVotacion">
+              <PropertyRef Name="CampaniaId" />
+            </Dependent>
+          </ReferentialConstraint>
+        </Association>
+        <Association Name="FK__Respuesta__Campa__72910220">
+          <End Type="voxpopuliDBModel.Campania" Role="Campania" Multiplicity="1" />
+          <End Type="voxpopuliDBModel.RespuestaCampania" Role="RespuestaCampania" Multiplicity="*" />
+          <ReferentialConstraint>
+            <Principal Role="Campania">
+              <PropertyRef Name="CampaniaId" />
+            </Principal>
+            <Dependent Role="RespuestaCampania">
+              <PropertyRef Name="CampaniaId" />
+            </Dependent>
+          </ReferentialConstraint>
+        </Association>
+        <Association Name="FK_CampaniaDetalle_Campania">
+          <End Type="voxpopuliDBModel.Campania" Role="Campania" Multiplicity="1" />
+          <End Type="voxpopuliDBModel.CampaniaDetalle" Role="CampaniaDetalle" Multiplicity="*" />
+          <ReferentialConstraint>
+            <Principal Role="Campania">
+              <PropertyRef Name="CampaniaId" />
+            </Principal>
+            <Dependent Role="CampaniaDetalle">
+              <PropertyRef Name="CampaniaId" />
+            </Dependent>
+          </ReferentialConstraint>
+        </Association>
+        <Association Name="FK__CampaniaD__Pregu__498EEC8D">
+          <End Type="voxpopuliDBModel.Pregunta" Role="Pregunta" Multiplicity="1" />
+          <End Type="voxpopuliDBModel.CampaniaDetalle" Role="CampaniaDetalle" Multiplicity="*" />
+          <ReferentialConstraint>
+            <Principal Role="Pregunta">
+              <PropertyRef Name="PreguntaId" />
+            </Principal>
+            <Dependent Role="CampaniaDetalle">
+              <PropertyRef Name="PreguntaId" />
+            </Dependent>
+          </ReferentialConstraint>
+        </Association>
+        <Association Name="FK__ControlPr__Pregu__4A8310C6">
+          <End Type="voxpopuliDBModel.Pregunta" Role="Pregunta" Multiplicity="1" />
+          <End Type="voxpopuliDBModel.ControlPregunta" Role="ControlPregunta" Multiplicity="*" />
+          <ReferentialConstraint>
+            <Principal Role="Pregunta">
+              <PropertyRef Name="PreguntaId" />
+            </Principal>
+            <Dependent Role="ControlPregunta">
+              <PropertyRef Name="PreguntaId" />
+            </Dependent>
+          </ReferentialConstraint>
+        </Association>
+        <Association Name="FK__ControlPr__Respu__4B7734FF">
+          <End Type="voxpopuliDBModel.Respuesta" Role="Respuesta" Multiplicity="1" />
+          <End Type="voxpopuliDBModel.ControlPregunta" Role="ControlPregunta" Multiplicity="*" />
+          <ReferentialConstraint>
+            <Principal Role="Respuesta">
+              <PropertyRef Name="RespuestaId" />
+            </Principal>
+            <Dependent Role="ControlPregunta">
+              <PropertyRef Name="RespuestaId" />
+            </Dependent>
+          </ReferentialConstraint>
+        </Association>
+        <Association Name="FK__Pregunta__TipoCo__4D5F7D71">
+          <End Type="voxpopuliDBModel.TipoControl" Role="TipoControl" Multiplicity="1" />
+          <End Type="voxpopuliDBModel.Pregunta" Role="Pregunta" Multiplicity="*" />
+          <ReferentialConstraint>
+            <Principal Role="TipoControl">
+              <PropertyRef Name="TipoControlId" />
+            </Principal>
+            <Dependent Role="Pregunta">
+              <PropertyRef Name="TipoControlId" />
+            </Dependent>
+          </ReferentialConstraint>
+        </Association>
+        <Association Name="FK__Respuesta__Pregu__74794A92">
+          <End Type="voxpopuliDBModel.Pregunta" Role="Pregunta" Multiplicity="1" />
+          <End Type="voxpopuliDBModel.RespuestaCampania" Role="RespuestaCampania" Multiplicity="*" />
+          <ReferentialConstraint>
+            <Principal Role="Pregunta">
+              <PropertyRef Name="PreguntaId" />
+            </Principal>
+            <Dependent Role="RespuestaCampania">
+              <PropertyRef Name="PreguntaId" />
+            </Dependent>
+          </ReferentialConstraint>
+        </Association>
+        <Association Name="FK__Respuesta__Respu__73852659">
+          <End Type="voxpopuliDBModel.Respuesta" Role="Respuesta" Multiplicity="1" />
+          <End Type="voxpopuliDBModel.RespuestaCampania" Role="RespuestaCampania" Multiplicity="*" />
+          <ReferentialConstraint>
+            <Principal Role="Respuesta">
+              <PropertyRef Name="RespuestaId" />
+            </Principal>
+            <Dependent Role="RespuestaCampania">
+              <PropertyRef Name="RespuestaId" />
+            </Dependent>
+          </ReferentialConstraint>
+        </Association>
+        </Schema>
+    </edmx:ConceptualModels>
+    <!-- C-S mapping content -->
+    <edmx:Mappings>
+      <Mapping Space="C-S" xmlns="http://schemas.microsoft.com/ado/2009/11/mapping/cs">
+        <EntityContainerMapping StorageEntityContainer="voxpopuliDBModelStoreContainer" CdmEntityContainer="voxpopuliDBEntities">
+          <EntitySetMapping Name="Campania">
+            <EntityTypeMapping TypeName="voxpopuliDBModel.Campania">
+              <MappingFragment StoreEntitySet="Campania">
+                <ScalarProperty Name="FechaFinaliza" ColumnName="FechaFinaliza" />
+                <ScalarProperty Name="FechaInicia" ColumnName="FechaInicia" />
+                <ScalarProperty Name="TipoCampaniaId" ColumnName="TipoCampaniaId" />
+                <ScalarProperty Name="Estatus" ColumnName="Estatus" />
+                <ScalarProperty Name="Descripcion" ColumnName="Descripcion" />
+                <ScalarProperty Name="Nombre" ColumnName="Nombre" />
+                <ScalarProperty Name="CampaniaId" ColumnName="CampaniaId" />
+              </MappingFragment>
+            </EntityTypeMapping>
+          </EntitySetMapping>
+          <EntitySetMapping Name="CampaniaDetalle">
+            <EntityTypeMapping TypeName="voxpopuliDBModel.CampaniaDetalle">
+              <MappingFragment StoreEntitySet="CampaniaDetalle">
+                <ScalarProperty Name="Fecha" ColumnName="Fecha" />
+                <ScalarProperty Name="Orden" ColumnName="Orden" />
+                <ScalarProperty Name="PreguntaId" ColumnName="PreguntaId" />
+                <ScalarProperty Name="CampaniaId" ColumnName="CampaniaId" />
+                <ScalarProperty Name="CampaniaDetalleId" ColumnName="CampaniaDetalleId" />
+              </MappingFragment>
+            </EntityTypeMapping>
+          </EntitySetMapping>
+          <EntitySetMapping Name="ControlPregunta">
+            <EntityTypeMapping TypeName="voxpopuliDBModel.ControlPregunta">
+              <MappingFragment StoreEntitySet="ControlPregunta">
+                <ScalarProperty Name="Fecha" ColumnName="Fecha" />
+                <ScalarProperty Name="Orden" ColumnName="Orden" />
+                <ScalarProperty Name="RespuestaId" ColumnName="RespuestaId" />
+                <ScalarProperty Name="PreguntaId" ColumnName="PreguntaId" />
+              </MappingFragment>
+            </EntityTypeMapping>
+          </EntitySetMapping>
+          <EntitySetMapping Name="ControlVotacion">
+            <EntityTypeMapping TypeName="voxpopuliDBModel.ControlVotacion">
+              <MappingFragment StoreEntitySet="ControlVotacion">
+                <ScalarProperty Name="Fecha" ColumnName="Fecha" />
+                <ScalarProperty Name="Longitud" ColumnName="Longitud" />
+                <ScalarProperty Name="Latitud" ColumnName="Latitud" />
+                <ScalarProperty Name="DeviceId" ColumnName="DeviceId" />
+                <ScalarProperty Name="CampaniaId" ColumnName="CampaniaId" />
+              </MappingFragment>
+            </EntityTypeMapping>
+          </EntitySetMapping>
+          <EntitySetMapping Name="Pregunta">
+            <EntityTypeMapping TypeName="voxpopuliDBModel.Pregunta">
+              <MappingFragment StoreEntitySet="Pregunta">
+                <ScalarProperty Name="TipoControlId" ColumnName="TipoControlId" />
+                <ScalarProperty Name="Fecha" ColumnName="Fecha" />
+                <ScalarProperty Name="Nombre" ColumnName="Nombre" />
+                <ScalarProperty Name="PreguntaId" ColumnName="PreguntaId" />
+              </MappingFragment>
+            </EntityTypeMapping>
+          </EntitySetMapping>
+          <EntitySetMapping Name="Respuesta">
+            <EntityTypeMapping TypeName="voxpopuliDBModel.Respuesta">
+              <MappingFragment StoreEntitySet="Respuesta">
+                <ScalarProperty Name="Fecha" ColumnName="Fecha" />
+                <ScalarProperty Name="Descripcion" ColumnName="Descripcion" />
+                <ScalarProperty Name="Nombre" ColumnName="Nombre" />
+                <ScalarProperty Name="RespuestaId" ColumnName="RespuestaId" />
+              </MappingFragment>
+            </EntityTypeMapping>
+          </EntitySetMapping>
+          <EntitySetMapping Name="RespuestaCampania">
+            <EntityTypeMapping TypeName="voxpopuliDBModel.RespuestaCampania">
+              <MappingFragment StoreEntitySet="RespuestaCampania">
+                <ScalarProperty Name="Fecha" ColumnName="Fecha" />
+                <ScalarProperty Name="Comentarios" ColumnName="Comentarios" />
+                <ScalarProperty Name="ContadorRespuesta" ColumnName="ContadorRespuesta" />
+                <ScalarProperty Name="OpcionRespuesta" ColumnName="OpcionRespuesta" />
+                <ScalarProperty Name="RespuestaId" ColumnName="RespuestaId" />
+                <ScalarProperty Name="PreguntaId" ColumnName="PreguntaId" />
+                <ScalarProperty Name="CampaniaId" ColumnName="CampaniaId" />
+                <ScalarProperty Name="CampaniaDetalleId" ColumnName="CampaniaDetalleId" />
+              </MappingFragment>
+            </EntityTypeMapping>
+          </EntitySetMapping>
+          <EntitySetMapping Name="sysdiagrams">
+            <EntityTypeMapping TypeName="voxpopuliDBModel.sysdiagrams">
+              <MappingFragment StoreEntitySet="sysdiagrams">
+                <ScalarProperty Name="definition" ColumnName="definition" />
+                <ScalarProperty Name="version" ColumnName="version" />
+                <ScalarProperty Name="diagram_id" ColumnName="diagram_id" />
+                <ScalarProperty Name="principal_id" ColumnName="principal_id" />
+                <ScalarProperty Name="name" ColumnName="name" />
+              </MappingFragment>
+            </EntityTypeMapping>
+          </EntitySetMapping>
+          <EntitySetMapping Name="TipoControl">
+            <EntityTypeMapping TypeName="voxpopuliDBModel.TipoControl">
+              <MappingFragment StoreEntitySet="TipoControl">
+                <ScalarProperty Name="Fecha" ColumnName="Fecha" />
+                <ScalarProperty Name="Nombre" ColumnName="Nombre" />
+                <ScalarProperty Name="TipoControlId" ColumnName="TipoControlId" />
+              </MappingFragment>
+            </EntityTypeMapping>
+          </EntitySetMapping>
+        </EntityContainerMapping>
+      </Mapping>
+    </edmx:Mappings>
+  </edmx:Runtime>
+  <!-- EF Designer content (DO NOT EDIT MANUALLY BELOW HERE) -->
+  <Designer xmlns="http://schemas.microsoft.com/ado/2009/11/edmx">
+    <Connection>
+      <DesignerInfoPropertySet>
+        <DesignerProperty Name="MetadataArtifactProcessing" Value="EmbedInOutputAssembly" />
+      </DesignerInfoPropertySet>
+    </Connection>
+    <Options>
+      <DesignerInfoPropertySet>
+        <DesignerProperty Name="ValidateOnBuild" Value="true" />
+        <DesignerProperty Name="EnablePluralization" Value="false" />
+        <DesignerProperty Name="IncludeForeignKeysInModel" Value="true" />
+        <DesignerProperty Name="UseLegacyProvider" Value="false" />
+        <DesignerProperty Name="CodeGenerationStrategy" Value="None" />
+      </DesignerInfoPropertySet>
+    </Options>
+    <!-- Diagram content (shape and connector positions) -->
+    <Diagrams></Diagrams>
+  </Designer>
+</edmx:Edmx>

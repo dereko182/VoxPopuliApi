@@ -1,0 +1,29 @@
+﻿
+
+
+<link rel="stylesheet" href="https://kendo.cdn.telerik.com/2017.1.223/styles/kendo.common-material.min.css" />
+<link rel="stylesheet" href="https://kendo.cdn.telerik.com/2017.1.223/styles/kendo.material.min.css" />
+<link rel="stylesheet" href="https://kendo.cdn.telerik.com/2017.1.223/styles/kendo.material.mobile.min.css" />
+
+<script src="~/Scripts/jquery-3.2.1.min.js"></script>
+<script src="https://kendo.cdn.telerik.com/2017.1.223/js/kendo.all.min.js"></script>
+<script src="~/Scripts/Indicador.js"></script>
+@*<META HTTP-EQUIV="refresh" CONTENT="3">*@
+<div class="row">
+    <input type="text" style="display:none" id="txtCampaniaId" value="@ViewData["CampaniaId"]">
+    @*<br />*@
+
+    <h1 id="txtNombreCampania"></h1>
+    <div id="example">
+        <div class="demo-section k-content wide" style="background: center no-repeat url('../voxpopuli/Content/img/world-map.png');">
+            <div class="row form-group">
+                <div id="chart0" class="col-sm-6 col-md-6"></div>
+                <div id="chart1" class="col-sm-6 col-md-6"></div>
+            </div>
+            <div class="row form-group">
+                <div id="chart2" class="col-sm-6 col-md-6"></div>
+                <div id="chart3" class="col-sm-6 col-md-6"></div>
+            </div>
+        </div>
+    </div>
+</div>

@@ -1,0 +1,12 @@
+
+
+INSERT INTO Campania VALUES('Recoleccion Basura Lomas','Campaña Calidad de Servicio de Recoleccion de la Basura del Area de Lomas',1,2,getdate(),getdate())
+
+INSERT INTO TipoCampania VALUES('Opcion Multiple',getdate())
+INSERT INTO TipoCampania VALUES('Automatica',getdate())
+
+INSERT INTO TipoPregunta VALUES('SI NO',getdate());
+INSERT INTO TipoPregunta VALUES('Opcional',getdate());
+
+INSERT INTO TipoControl VALUES('Opcional',getdate())
+INSERT INTO TipoControl VALUES('Opcion Multiple',getdate())
